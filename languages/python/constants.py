@@ -1,0 +1,8 @@
+from typing import Final
+
+HEALTH_PERCENTAGE: Final[float] = 0.1
+END_OF_YEAR_BONUS_PERCENTAGE: Final[float] = 0.3
+PENSION_PERCENTAGE: Final[float] = 0.15
+SENIORITY_BONUS_PERCENTAGE: Final[float] = 0.01
+
+MINIMUM_AGE_FOR_SENIORITY_BONUS: Final[int] = 55
