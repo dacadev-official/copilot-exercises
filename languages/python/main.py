@@ -1,9 +1,7 @@
 from pathlib import Path
 import os
 
-from models import Employee
-from utils import load_csv_data
-from services import benefits_service, report_benefits_service
+from services import benefits_service, report_benefits_service, load_employee_service
 
 
 def main() -> int:
@@ -11,8 +9,8 @@ def main() -> int:
     data_folder = current_folder / "../data"
     data_path = data_folder / "data.csv"
 
-    employees_data = load_csv_data(data_path, Employee)
-    benefits = benefits_service(employees_data)
+    employees = load_employee_service(data_path)
+    benefits = benefits_service(employees)
     report_benefits_service(benefits, data_folder)
 
     return 0

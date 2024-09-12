@@ -9,7 +9,11 @@ from constants import (
     MINIMUM_AGE_FOR_SENIORITY_BONUS,
     SENIORITY_BONUS_PERCENTAGE,
 )
-from utils import record_data_to_csv, record_data
+from utils import record_data_to_csv, record_data, load_csv_data
+
+
+def load_employee_service(data_path: Path) -> list[Employee]:
+    return load_csv_data(data_path, Employee)
 
 
 def benefits_service(employees: list[Employee]) -> list[Benefits]:

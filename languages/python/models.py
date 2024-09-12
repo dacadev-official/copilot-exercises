@@ -16,8 +16,8 @@ class Employee:
 
 @dataclass(frozen=True)
 class Benefits:
-    health: int
     employee: Employee
+    health: int
     end_of_year_bonus: int
     pension: int
     seniority_bonus: int
